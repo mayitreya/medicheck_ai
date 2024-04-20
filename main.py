@@ -25,22 +25,6 @@ def submit():
         substances_cigarettes = request.form.get('substances_cigarettes')
         substances_text = request.form.get('substances_text')
 
-        '''print("Patient's Age Group:", age)
-        print("Patient's Gender:", gender)
-        print("Is the Patient Pregnant?", pregnant)
-        print("Known Medical Conditions:", medical_conditions)
-        print("Duration of Symptoms (Number):", duration_number)
-        print("Duration of Symptoms (Period):", duration_period)
-        print("Symptom Severity Scale:", symptom_scale)
-        print("Symptoms:", symptoms)
-        print("Previous Diagnoses:", previous_diagnoses)
-        print("Previous Surgeries:", previous_surgeries)
-        print("Family Medical History:", family_medical_history)
-        print("Fitness Level:", fitness_level)
-        print("Substances Alcohol: ", substances_alcohol)
-        print("Substances Cigarettes: ", substances_cigarettes)
-        print("Substances Text: ", substances_text)'''
-
         inp = "Patient Information:\nAge: "
         if age == None: inp = inp + "Not Specified\nGender: "
         else: inp = inp + age + "\nGender: "
