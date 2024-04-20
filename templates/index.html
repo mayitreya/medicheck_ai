@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCheck AI</title>
+    <style>
+        .container {
+            margin: 20px;
+            font-family: 'Montserrat';
+            font-size: 20px;
+        }
+
+        .radio-box {
+            border: 1px solid #00b7ff;
+            border-radius: 25px;
+            padding: 10px;
+            font-family: 'Montserrat';
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .heading {
+            font-family: 'Montserrat';
+            font-size: 22px;
+            color: #008cff;
+            text-align: center;
+
+        }
+
+        textarea {
+            font-family: 'Montserrat';
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 1px solid #00b7ff;
+            border-radius: 25px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+        }
+
+        .patientsection {
+            font-family: 'Montserrat';
+            font-size: 40px;
+            color: #008cff;
+            text-align: center;
+        }
+
+        .dropdown {
+            width: 100%;
+            margin-bottom: 20px;
+            font-family: 'Montserrat';
+        }
+
+        .dropdown select {
+            font-family: 'Montserrat';
+            width: 100%;
+            padding: 12px;
+            border-radius: 25px;
+            border: 1px solid #00b7ff;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%2300b7ff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+
+        .dropdown select:focus {
+            outline: none;
+        }
+
+        .submit {
+            border-radius: 25px;
+            background-color: #58b7ff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .dark-mode {
+            background-color: #333333;
+            color: white;
+        }
+
+        .dark-mode2 {
+            border-radius: 25px;
+            background-color: #58b7ff;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+            height: 20%;
+            width: 10%;
+        }
+
+        .dark-mode2:hover {
+            border-radius: 25px;
+            background-color: #1b9cff;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+            height: 20%;
+            width: 10%;
+        }
+        
+
+        .responsebox {
+            font-family: 'Montserrat';
+            width: 100%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 1px solid #00b7ff;
+            border-radius: 25px;
+            background-color: #f8f8f896;
+            font-size: 24px;
+            resize: vertical;
+        }
+
+        body.dark-mode .radio-box,
+        body.dark-mode .dropdown select,
+        body.dark-mode .responsebox {
+            background-color: #555;
+            border-color: #00b7ff;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+</script>
+
+<body>
+    <button onclick="myFunction()" style="float: right" class = "dark-mode2">Toggle dark mode</button>
+    <form id="submissionForm" action="/" method="POST" name="patientForm">
+        <br></br>
+        <div class="heading">
+            <h1>Welcome to MediCheck AI!</h1>
+            <p>Disclaimer: This website does NOT provide a formal medical diagnosis! Consult a medical professional in
+                the
+                event you require it!</p>
+            <hr />
+        </div>
+
+        <div class="container">
+            <h1 class="patientsection">Preliminary Patient Information</h1>
+            <h2>What is the patient's age group?</h2>
+            <div class="radio-box">
+                <label>
+                    <input type="radio" name="age" value="0-3" required>
+                    0-3
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="4-12">
+                    4-12
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="13-19">
+                    13-19
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="20-29">
+                    20-29
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="30-39">
+                    30-39
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="40-49">
+                    40-49
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="50-59">
+                    50-59
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="60-69">
+                    60-69
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="70-79">
+                    70-79
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="80-89">
+                    80-89
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="90-99">
+                    90-99
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="age" value="100+">
+                    100+
+                </label>
+            </div>
+            <h2>What is the patient's sex?</h2>
+            <div class="radio-box">
+                <label>
+                    <input type="radio" name="gender" value="Male">
+                    Male
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="gender" value="Female">
+                    Female
+                </label>
+            </div>
+            <h2>Is the patient pregnant?</h2>
+            <div class="radio-box">
+                <label>
+                    <input type="radio" name="pregnant" value="Yes" required>
+                    Yes
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="pregnant" value="No">
+                    No
+                </label>
+                <br />
+                <label>
+                    <input type="radio" name="pregnant" value="N/A">
+                    Not Applicable
+                </label>
+            </div>
+            <hr />
+            <h1 class="patientsection">Symptoms</h1>
+            <h2>How long has the patient been experiencing their symptoms?</h2>
+            <div class="dropdown">
+                <select name="duration_number" required>
+                    <option value="" disabled selected>Duration (number)</option>
+                    <option value="One">One</option>
+                    <option value="Two">Two</option>
+                    <option value="Three">Three</option>
+                    <option value="Four">Four</option>
+                    <option value="Five">Five</option>
+                    <option value="Six or More">Six or more</option>
+                </select>
+                <br />
+                <br />
+                <div class="dropdown">
+                    <select name="duration_period" required>
+                        <option value="" disabled selected>Duration (period of time)</option>
+                        <option value="Hours">Hours</option>
+                        <option value="Days">Days</option>
+                        <option value="Weeks">Weeks</option>
+                        <option value="Months">Months</option>
+                        <option value="Years">Years</option>
+                        <option value="Chronic">It's chronic</option>
+                    </select>
+                </div>
+                <h2>How bad does the patient indicate their symptoms are on a scale of 1-10?</h2>
+                <div class="radio-box">
+                    <label>
+                        <input type="radio" name="symptomscale" value="One" required>
+                        1
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Two">
+                        2
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Three">
+                        3
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Four">
+                        4
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Five">
+                        5
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Six">
+                        6
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Seven">
+                        7
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Eight">
+                        8
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Nine">
+                        9
+                    </label>
+                    <label>
+                        <input type="radio" name="symptomscale" value="Ten">
+                        10
+                    </label>
+                </div>
+                <div>
+                    <h2>Please type in ongoing symptoms:</h2>
+                    <textarea name="symptoms" required></textarea>
+                </div>
+            </div>
+            <hr />
+            <h1 class="patientsection">Medical History</h1>
+            <div>
+                <h2>Please type in previously received medical diagnoses:</h2>
+                <textarea name="previous_diagnoses"></textarea>
+                <br></br>
+            </div>
+            <div>
+                <h2>Please type in previous surgeries undergone:</h2>
+                <textarea name="previous_surgeries"></textarea>
+                <br></br>
+            </div>
+            <div>
+                <h2>Please type in any relevant familial medical history:</h2>
+                <textarea name="family_medical_history"></textarea>
+                <br></br>
+            </div>
+            <hr />
+            <h1 class="patientsection">Patient Lifestyle</h1>
+
+            <h2>What is the patient's current fitness/exercise level?</h2>
+            <div class="radio-box">
+                <input type="radio" name="fitness_level" value="Sedentary"><label>Sedentary</label>
+                <input type="radio" name="fitness_level" value="Lightly Active"><label>Lightly Active</label>
+                <input type="radio" name="fitness_level" value="Moderately Active"><label>Moderately Active</label>
+                <input type="radio" name="fitness_level" value="Very Active"><label>Very Active</label>
+            </div>
+            <br></br>
+
+            <h2>Does the patient use any of the following substances?</h2>
+            <div class="radio-box">
+                <input type="checkbox" name="substances_alcohol" value="Alcohol"><label>Alcohol</label>
+                <br></br>
+                <input type="checkbox" name="substances_cigarettes" value="Cigarettes"><label>Cigarettes</label>
+                <br></br><input type="checkbox"><label>Other (Please Specify): <br></br><textarea rows="3" cols="10"
+                        name="substances_text"></textarea></label>
+                <br></br>
+            </div>
+            <br></br>
+
+            <input class="submit" type="submit" value="Submit">
+            <br /><br /><br />
+
+            <hr />
+            <h1 class="patientsection">AI Response</h1>
+
+            <div class="responsebox" id="submissionMessage">
+            </div>
+
+
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    </form>
+
+    <script>
+        document.getElementById("submissionForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var form = event.target;
+            var formData = new FormData(form);
+
+            var submissionMessage = document.getElementById("submissionMessage");
+            submissionMessage.innerText = "Loading Response (Please Wait...)";
+
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    var response = JSON.parse(xhr.responseText);
+                    var additionalText = response.additional_text;
+                    submissionMessage.innerText = additionalText;
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+    
+
+</body>
+
+</html>
