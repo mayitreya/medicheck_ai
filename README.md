@@ -36,6 +36,9 @@ MedLLaMa2 is an advanced language model (forked from Meta’s LLaMa2 model) trai
 4. macOS or some flavor of Linux (Windows will work, only if WSL2 is used)
 
 ## Installation (All Operating Systems)
+### Cloning the Repository
+Clone the repository, either by clicking the clone button on GitHub and downloading a zip file, or by typing `git clone https://github.com/mayitreya/medicheck_ai.git` into a terminal (make sure you have `git` installed!)
+
 ### Downloading Ollama
 *You will be self-hosting a large language model on your computer. It will take around 4-5 GB of storage, so make sure you have that much to spare*
 1. Visit `https://ollama.com/download` and choose your operating system
