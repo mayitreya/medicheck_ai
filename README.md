@@ -61,3 +61,6 @@ Clone the repository either by...
 
 ### Done!
 Go ahead and input some information into the online form and see the magic happen before your very eyes!
+
+# Future Iterations of this Project
+For the best possible experience, the questions that MediCheck AI presents the user should be dynamically generated based on the previous user response. They currently are not (the website is static), but as a future iteration, this would be an extremely solid idea.
