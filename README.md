@@ -43,7 +43,7 @@ Clone the repository either by...
 
 ### Downloading Ollama
 *You will be self-hosting a large language model on your computer. It will take around 4-5 GB of storage, so make sure you have that much to spare*
-1. Visit `https://ollama.com/download` and choose your operating system
+1. Visit https://ollama.com/download and choose your operating system
 2. If you're using Linux, run the command the website tells you to run, in order to install Ollama
 3. Once Ollama is installed, run `ollama run medllama2` and wait for it to finish installing. You will know that it's finished once you see `>>> Send a message (/? for help)`
 4. Control + D will escape that prompt
