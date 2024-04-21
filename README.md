@@ -60,4 +60,4 @@ Clone the repository either by...
 4. If something doesn't work here, it means that you're missing some dependency. It's hard to say what it could be; just install what the terminal says is missing
 
 ### Done!
-1. Go ahead and input some information into the online form and see the magic happen before your very eyes!
+Go ahead and input some information into the online form and see the magic happen before your very eyes!
