@@ -46,7 +46,7 @@ Clone the repository either by...
 1. Visit https://ollama.com/download and choose your operating system
 2. If you're using Linux, run the command the website tells you to run, in order to install Ollama
 3. Once Ollama is installed, run `ollama run medllama2` and wait for it to finish installing. You will know that it's finished once you see `>>> Send a message (/? for help)`
-4. Control + D will escape that prompt
+4. Control + D will escape the prompt
 
 ### Downloading the Python Modules We Need
 1. If you don't have python3 installed, go ahead and do that first, for your specific OS
