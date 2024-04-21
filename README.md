@@ -35,7 +35,7 @@ MedLLaMa2 is an advanced language model (forked from Meta’s LLaMa2 model) trai
 3. Ollama; Including the MedLLaMa2 model
 4. macOS or some flavor of Linux (Windows will work, only if WSL2 is used)
 
-## Installation (All Operating Systems)
+# Installation (All Operating Systems)
 ### Cloning the Repository
 Clone the repository either by...
 1. Clicking the `<> Code` button on the repository and downloading a zip file of the project, or by...
